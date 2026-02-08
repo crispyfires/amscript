@@ -141,3 +141,8 @@ echo "Installing btrfs-assistant..."
 sudo dnf install btrfs-assistant -y &&
 echo "btrfs-assistant install finished" &&
 echo "Please read this for setup instructions: https://knowledgebase.frame.work/en_us/fedora-system-restore-root-snapshots-using-btrfs-assistant-rkHNxajS3"
+
+# End script
+dnf update -y &&
+echo "Finished running install script! Please reboot your system now to apply all changes, mmkay?"
+echo "Launch the Nvidia script that came with this after you reboot your system."
