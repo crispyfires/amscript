@@ -1,5 +1,5 @@
 Some scripts to set up Fedora that I made for a friend of mine.
-# Running
+## Running
 
 ```
 git clone https://github.com/crispyfires/amscript.git
