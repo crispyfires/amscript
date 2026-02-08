@@ -16,6 +16,14 @@ dnf install -y https://download1.rpmfusion.org/free/fedora/rpmfusion-free-releas
 dnf install -y https://download1.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm
 echo "Finished enabling RPM Fusion repos"
 
+# Install multimedia codescs
+# Multimedia codecs are needed for some stuff like watching films, but they're not installed by default due to Fedora's stance on non-FOSS software
+echo "Installing multimedia codecs..."
+dnf swap --y ffmpeg-free ffmpeg --allowerasing
+dnf update -y @multimedia --setopt="install_weak_deps=False" --exclude=PackageKit-gstreamer-plugin
+dnf update -y @sound-and-video
+echo "Multimedia codecs install finished"
+
 # Switch Flatpak repos to the Flathub because Fedora's Flathub repos are outdated a lot of the time and sometimes broken (idk why they even exist or ship by default)
 echo "Switching Flatpak repo to Flathub instead of Fedora's..."
 dnf install -y flatpak &&
