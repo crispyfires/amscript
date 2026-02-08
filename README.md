@@ -1,0 +1,1 @@
+A script to set up Fedora that I made for a friend of mine.
