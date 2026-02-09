@@ -109,6 +109,18 @@ echo "Installing Bottles from Flathub..."
 flatpak install -y com.usebottles.bottles &&
 echo "Bottles install finished"
 
+# Install Wine
+# Wine is a compatibility layer for running Windows applications. Bottles uses Wine under the hood, but I installed it seperately in case you need it.
+echo "Installing Wine..."
+dnf install -y wine-common wine-mono winetricks &&
+echo "Wine install finished"
+
+# Install WineZGUI
+# WineZGUI is a GUI for managing Wine prefixes
+echo "Installing WineZGUI from Flathub..."
+flatpak install -y io.github.fastrizwaan.WineZGUI &&
+echo "WineZGUI install finished"
+
 # Install Gear Lever
 # Gear Lever is a GUI for managing AppImages.
 echo "Installing Gear Lever from Flathub..."
@@ -126,6 +138,18 @@ echo "Pika Backup install finished"
 echo "Installing Sitra from Flathub..."
 flatpak install flathub io.github.sitraorg.sitra &&
 echo "Sitra install finished"
+
+# Install Mission Center
+# Mission Center is a detailed GUI for viewing system informance
+echo "Installing Mission Center from Flathub..."
+flatpak install io.missioncenter.MissionCenter &&
+echo "Mission Center install finished"
+
+# Install Flatseal
+# Flatseal is a GUI for managing Flatpak permissions. 
+echo "Installing Flatseal from Flathub..."
+flatpak install github.tchx84.Flatseal &&
+echo "Flatseal install finished"
 
 # Install Distrobox
 # Distrobox is a CLI tool for running other Linux distros in a containerised environment
